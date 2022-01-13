@@ -63254,7 +63254,26 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Chip":"../node_modules/@mui/material/Chip/Chip.js","./chipClasses":"../node_modules/@mui/material/Chip/chipClasses.js"}],"../node_modules/tslib/tslib.es6.js":[function(require,module,exports) {
+},{"./Chip":"../node_modules/@mui/material/Chip/Chip.js","./chipClasses":"../node_modules/@mui/material/Chip/chipClasses.js"}],"../node_modules/@mui/icons-material/CurrencyLira.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M9 8.76V3h2v4.51L15 5v2.36l-4 2.51.01 2.35L15 9.72v2.36l-4 2.51V19c2.76 0 5-2.24 5-5h2c0 3.87-3.13 7-7 7H9v-5.16l-3 1.88v-2.36l3-1.88v-2.36L6 13v-2.36l3-1.88z"
+}), 'CurrencyLira');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/tslib/tslib.es6.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68295,25 +68314,6 @@ var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("p
 }), 'Settings');
 
 exports.default = _default;
-},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/Mail.js":[function(require,module,exports) {
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
-
-var _jsxRuntime = require("react/jsx-runtime");
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-}), 'Mail');
-
-exports.default = _default;
 },{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/Logout.js":[function(require,module,exports) {
 "use strict";
 
@@ -68331,6 +68331,157 @@ var _jsxRuntime = require("react/jsx-runtime");
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
 }), 'Logout');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/BarChartOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"
+}), 'BarChartOutlined');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/WarningAmberRounded.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M12 5.99 19.53 19H4.47L12 5.99M2.74 18c-.77 1.33.19 3 1.73 3h15.06c1.54 0 2.5-1.67 1.73-3L13.73 4.99c-.77-1.33-2.69-1.33-3.46 0L2.74 18zM11 11v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zm0 5h2v2h-2z"
+}), 'WarningAmberRounded');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/LocalOfferOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)([/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01 4 11V4h7v-.01l9 9-7 7.02z"
+}, "0"), /*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+  cx: "6.5",
+  cy: "6.5",
+  r: "1.5"
+}, "1")], 'LocalOfferOutlined');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/GroupOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"
+}), 'GroupOutlined');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/LocationOnOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)([/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"
+}, "0"), /*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+  cx: "12",
+  cy: "9",
+  r: "2.5"
+}, "1")], 'LocationOnOutlined');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/AvTimerOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M11 17c0 .55.45 1 1 1s1-.45 1-1-.45-1-1-1-1 .45-1 1zm0-14v4h2V5.08c3.39.49 6 3.39 6 6.92 0 3.87-3.13 7-7 7s-7-3.13-7-7c0-1.68.59-3.22 1.58-4.42L12 13l1.41-1.41-6.8-6.8v.02C4.42 6.45 3 9.05 3 12c0 4.97 4.02 9 9 9 4.97 0 9-4.03 9-9s-4.03-9-9-9h-1zm7 9c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1zM6 12c0 .55.45 1 1 1s1-.45 1-1-.45-1-1-1-1 .45-1 1z"
+}), 'AvTimerOutlined');
+
+exports.default = _default;
+},{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/@mui/icons-material/SupportAgentOutlined.js":[function(require,module,exports) {
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _createSvgIcon = _interopRequireDefault(require("./utils/createSvgIcon"));
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+var _default = (0, _createSvgIcon.default)([/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62z"
+}, "0"), /*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+  cx: "9",
+  cy: "13",
+  r: "1"
+}, "1"), /*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+  cx: "15",
+  cy: "13",
+  r: "1"
+}, "2"), /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M18 11.03C17.52 8.18 15.04 6 12.05 6c-3.03 0-6.29 2.51-6.03 6.45 2.47-1.01 4.33-3.21 4.86-5.89 1.31 2.63 4 4.44 7.12 4.47z"
+}, "3")], 'SupportAgentOutlined');
 
 exports.default = _default;
 },{"@babel/runtime/helpers/interopRequireDefault":"../node_modules/@babel/runtime/helpers/interopRequireDefault.js","./utils/createSvgIcon":"../node_modules/@mui/icons-material/utils/createSvgIcon.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"components/Drawer.tsx":[function(require,module,exports) {
@@ -68363,11 +68514,27 @@ var _Home = _interopRequireDefault(require("@mui/icons-material/Home"));
 
 var _Settings = _interopRequireDefault(require("@mui/icons-material/Settings"));
 
-var _Mail = _interopRequireDefault(require("@mui/icons-material/Mail"));
-
 var _Logout = _interopRequireDefault(require("@mui/icons-material/Logout"));
 
 var _IconButton = _interopRequireDefault(require("@mui/material/IconButton"));
+
+var _Stack = _interopRequireDefault(require("@mui/material/Stack"));
+
+var _Typography = _interopRequireDefault(require("@mui/material/Typography"));
+
+var _BarChartOutlined = _interopRequireDefault(require("@mui/icons-material/BarChartOutlined"));
+
+var _WarningAmberRounded = _interopRequireDefault(require("@mui/icons-material/WarningAmberRounded"));
+
+var _LocalOfferOutlined = _interopRequireDefault(require("@mui/icons-material/LocalOfferOutlined"));
+
+var _GroupOutlined = _interopRequireDefault(require("@mui/icons-material/GroupOutlined"));
+
+var _LocationOnOutlined = _interopRequireDefault(require("@mui/icons-material/LocationOnOutlined"));
+
+var _AvTimerOutlined = _interopRequireDefault(require("@mui/icons-material/AvTimerOutlined"));
+
+var _SupportAgentOutlined = _interopRequireDefault(require("@mui/icons-material/SupportAgentOutlined"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68395,16 +68562,34 @@ function bKashToggleMenu() {
     };
   };
 
+  var bMenuList = ['Home', 'Statements', 'Limits', 'Coupons', 'Refer bKash App', 'bKash Map', 'Discover bKash', 'Settings', 'Support'];
+
   var list = function list(anchor) {
     return _react.default.createElement(_Box.default, {
       role: "presentation",
       onClick: toggleDrawer(anchor, false),
       onKeyDown: toggleDrawer(anchor, false)
-    }, _react.default.createElement(_List.default, null, ['Home', 'Settings', 'Inbox'].map(function (text, index) {
+    }, _react.default.createElement(_Stack.default, {
+      spacing: 2,
+      sx: {
+        pt: 2,
+        pl: 4
+      }
+    }, _react.default.createElement(_Stack.default, {
+      direction: "row",
+      spacing: 1
+    }, _react.default.createElement(_Typography.default, {
+      color: "primary"
+    }, _react.default.createElement(_Box.default, {
+      component: "span",
+      sx: {
+        fontWeight: 'bold'
+      }
+    }, "bKash"), " Menu"))), _react.default.createElement(_List.default, null, bMenuList.map(function (text, index) {
       return _react.default.createElement(_ListItem.default, {
         button: true,
         key: text
-      }, _react.default.createElement(_ListItemIcon.default, null, index === 0 && _react.default.createElement(_Home.default, null), index === 1 && _react.default.createElement(_Settings.default, null), index === 2 && _react.default.createElement(_Mail.default, null)), _react.default.createElement(_ListItemText.default, {
+      }, _react.default.createElement(_ListItemIcon.default, null, index === 0 && _react.default.createElement(_Home.default, null), index === 1 && _react.default.createElement(_BarChartOutlined.default, null), index === 2 && _react.default.createElement(_WarningAmberRounded.default, null), index === 3 && _react.default.createElement(_LocalOfferOutlined.default, null), index === 4 && _react.default.createElement(_GroupOutlined.default, null), index === 5 && _react.default.createElement(_LocationOnOutlined.default, null), index === 6 && _react.default.createElement(_AvTimerOutlined.default, null), index === 7 && _react.default.createElement(_Settings.default, null), index === 8 && _react.default.createElement(_SupportAgentOutlined.default, null)), _react.default.createElement(_ListItemText.default, {
         primary: text
       }));
     })), _react.default.createElement(_Divider.default, null), _react.default.createElement(_List.default, null, ['Log Out'].map(function (text) {
@@ -68432,7 +68617,7 @@ function bKashToggleMenu() {
     }, list(anchor)));
   }));
 }
-},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/SwipeableDrawer":"../node_modules/@mui/material/SwipeableDrawer/index.js","@mui/material/Divider":"../node_modules/@mui/material/Divider/index.js","@mui/material/List":"../node_modules/@mui/material/List/index.js","@mui/material/ListItem":"../node_modules/@mui/material/ListItem/index.js","@mui/material/ListItemText":"../node_modules/@mui/material/ListItemText/index.js","@mui/material/ListItemIcon":"../node_modules/@mui/material/ListItemIcon/index.js","@mui/icons-material/Home":"../node_modules/@mui/icons-material/Home.js","@mui/icons-material/Settings":"../node_modules/@mui/icons-material/Settings.js","@mui/icons-material/Mail":"../node_modules/@mui/icons-material/Mail.js","@mui/icons-material/Logout":"../node_modules/@mui/icons-material/Logout.js","@mui/material/IconButton":"../node_modules/@mui/material/IconButton/index.js"}],"components/Header.tsx":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/SwipeableDrawer":"../node_modules/@mui/material/SwipeableDrawer/index.js","@mui/material/Divider":"../node_modules/@mui/material/Divider/index.js","@mui/material/List":"../node_modules/@mui/material/List/index.js","@mui/material/ListItem":"../node_modules/@mui/material/ListItem/index.js","@mui/material/ListItemText":"../node_modules/@mui/material/ListItemText/index.js","@mui/material/ListItemIcon":"../node_modules/@mui/material/ListItemIcon/index.js","@mui/icons-material/Home":"../node_modules/@mui/icons-material/Home.js","@mui/icons-material/Settings":"../node_modules/@mui/icons-material/Settings.js","@mui/icons-material/Logout":"../node_modules/@mui/icons-material/Logout.js","@mui/material/IconButton":"../node_modules/@mui/material/IconButton/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/icons-material/BarChartOutlined":"../node_modules/@mui/icons-material/BarChartOutlined.js","@mui/icons-material/WarningAmberRounded":"../node_modules/@mui/icons-material/WarningAmberRounded.js","@mui/icons-material/LocalOfferOutlined":"../node_modules/@mui/icons-material/LocalOfferOutlined.js","@mui/icons-material/GroupOutlined":"../node_modules/@mui/icons-material/GroupOutlined.js","@mui/icons-material/LocationOnOutlined":"../node_modules/@mui/icons-material/LocationOnOutlined.js","@mui/icons-material/AvTimerOutlined":"../node_modules/@mui/icons-material/AvTimerOutlined.js","@mui/icons-material/SupportAgentOutlined":"../node_modules/@mui/icons-material/SupportAgentOutlined.js"}],"components/Header.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68466,6 +68651,8 @@ var _Switch = _interopRequireDefault(require("@mui/material/Switch"));
 
 var _Chip = _interopRequireDefault(require("@mui/material/Chip"));
 
+var _CurrencyLira = _interopRequireDefault(require("@mui/icons-material/CurrencyLira"));
+
 var _Drawer = _interopRequireDefault(require("./Drawer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -68479,12 +68666,26 @@ function bkashAppBar() {
       selected = _a[0],
       setSelected = _a[1];
 
+  var switchControler = _react.default.createElement(_Switch.default, {
+    onChange: function onChange(event) {
+      return setSelected(event.target.checked);
+    },
+    color: "primary",
+    checked: selected
+  });
+
   var balanceText = _react.default.createElement(_Chip.default, {
-    label: "Tap for Balence",
+    icon: _react.default.createElement(_CurrencyLira.default, null),
+    label: "Tap For Balance",
+    color: "primary",
+    sx: {
+      bgcolor: 'background.default'
+    },
     variant: "outlined"
   });
 
   var balanceBDT = _react.default.createElement(_Chip.default, {
+    icon: _react.default.createElement(_CurrencyLira.default, null),
     label: "5000 BDT",
     color: "primary",
     sx: {
@@ -68500,21 +68701,35 @@ function bkashAppBar() {
   }, _react.default.createElement(_AppBar.default, {
     position: "fixed",
     sx: {
-      bgcolor: 'primary'
+      bgcolor: 'primary',
+      py: '10px'
     }
-  }, _react.default.createElement(_Toolbar.default, null, _react.default.createElement(_Stack.default, {
+  }, _react.default.createElement(_Toolbar.default, {
+    sx: {
+      px: '5px'
+    }
+  }, _react.default.createElement(_Stack.default, {
     direction: "row",
     spacing: 2
   }, _react.default.createElement(_Avatar.default, {
     alt: "Profile",
-    src: "https://mui.com/static/images/avatar/2.jpg"
+    src: "https://mui.com/static/images/avatar/2.jpg",
+    sx: {
+      width: 54,
+      height: 54
+    }
   })), _react.default.createElement(_Stack.default, {
     spacing: 1
   }, _react.default.createElement(_Stack.default, {
     direction: "row",
-    spacing: 1
+    spacing: 2,
+    sx: {
+      pl: '16px',
+      mt: '8px'
+    }
   }, _react.default.createElement(_Typography.default, {
-    variant: "h6",
+    variant: "body1",
+    color: "inherit",
     noWrap: true,
     component: "div",
     sx: {
@@ -68523,18 +68738,15 @@ function bkashAppBar() {
         sm: 'block'
       }
     }
-  }, "MUI")), _react.default.createElement(_Stack.default, {
+  }, "User Name")), _react.default.createElement(_Stack.default, {
     direction: "row",
-    spacing: 1
+    spacing: 1,
+    sx: {
+      mt: 0
+    }
   }, _react.default.createElement(_FormControlLabel.default, {
     value: selected ? balanceText : balanceBDT,
-    control: _react.default.createElement(_Switch.default, {
-      onChange: function onChange(event) {
-        return setSelected(event.target.checked);
-      },
-      color: "primary",
-      checked: selected
-    }),
+    control: switchControler,
     label: selected ? balanceText : balanceBDT,
     labelPlacement: selected ? "start" : "start"
   }))), _react.default.createElement(_Box.default, {
@@ -68556,7 +68768,7 @@ function bkashAppBar() {
     color: "error"
   }, _react.default.createElement(_EmojiEvents.default, null))), _react.default.createElement(_Drawer.default, null)))));
 }
-},{"react":"../node_modules/react/index.js","@mui/material/AppBar":"../node_modules/@mui/material/AppBar/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Toolbar":"../node_modules/@mui/material/Toolbar/index.js","@mui/material/IconButton":"../node_modules/@mui/material/IconButton/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/material/Badge":"../node_modules/@mui/material/Badge/index.js","@mui/material/Avatar":"../node_modules/@mui/material/Avatar/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/icons-material/EmojiEvents":"../node_modules/@mui/icons-material/EmojiEvents.js","@mui/material/FormControlLabel":"../node_modules/@mui/material/FormControlLabel/index.js","@mui/material/Switch":"../node_modules/@mui/material/Switch/index.js","@mui/material/Chip":"../node_modules/@mui/material/Chip/index.js","./Drawer":"components/Drawer.tsx"}],"components/Generic.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@mui/material/AppBar":"../node_modules/@mui/material/AppBar/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Toolbar":"../node_modules/@mui/material/Toolbar/index.js","@mui/material/IconButton":"../node_modules/@mui/material/IconButton/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/material/Badge":"../node_modules/@mui/material/Badge/index.js","@mui/material/Avatar":"../node_modules/@mui/material/Avatar/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/icons-material/EmojiEvents":"../node_modules/@mui/icons-material/EmojiEvents.js","@mui/material/FormControlLabel":"../node_modules/@mui/material/FormControlLabel/index.js","@mui/material/Switch":"../node_modules/@mui/material/Switch/index.js","@mui/material/Chip":"../node_modules/@mui/material/Chip/index.js","@mui/icons-material/CurrencyLira":"../node_modules/@mui/icons-material/CurrencyLira.js","./Drawer":"components/Drawer.tsx"}],"components/Generic.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -70338,7 +70550,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38459" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41405" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

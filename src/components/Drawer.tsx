@@ -9,9 +9,17 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import HomeIcon from '@mui/icons-material/Home';
 import SettingsIcon from '@mui/icons-material/Settings';
-import MailIcon from '@mui/icons-material/Mail';
 import LogoutIcon from '@mui/icons-material/Logout';
 import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
+import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
+import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import AvTimerOutlinedIcon from '@mui/icons-material/AvTimerOutlined';
+import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 
 type Anchor = 'right';
 
@@ -35,6 +43,18 @@ export default function bKashToggleMenu() {
             setState({...state, [anchor]: open });
         };
 
+        const bMenuList = [
+            'Home',
+            'Statements',
+            'Limits',
+            'Coupons',
+            'Refer bKash App',
+            'bKash Map',
+            'Discover bKash',
+            'Settings',
+            'Support'
+        ];
+
         const list = (anchor : Anchor ) => (
             <Box
                 
@@ -42,13 +62,27 @@ export default function bKashToggleMenu() {
                 onClick={toggleDrawer(anchor, false)}
                 onKeyDown={toggleDrawer(anchor, false)}
             >
+                <Stack spacing={2} sx={{ pt: 2, pl: 4 }}>
+                    <Stack direction="row" spacing={1}>
+                        <Typography color="primary">
+                            <Box component="span" sx={{ fontWeight: 'bold' }}>
+                                bKash</Box> Menu
+                        </Typography>
+                    </Stack>
+                </Stack>
                 <List>
-                    {['Home', 'Settings', 'Inbox'].map((text, index) => (
+                    {bMenuList.map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
                                 {index === 0 && <HomeIcon /> }
-                                {index === 1 && <SettingsIcon />}
-                                {index === 2 &&  <MailIcon />}
+                                {index === 1 && <BarChartOutlinedIcon />}
+                                {index === 2 && <WarningAmberRoundedIcon />}
+                                {index === 3 &&  <LocalOfferOutlinedIcon />}
+                                {index === 4 &&  <GroupOutlinedIcon />}
+                                {index === 5 &&  <LocationOnOutlinedIcon />}
+                                {index === 6 &&  <AvTimerOutlinedIcon />}
+                                {index === 7 &&  <SettingsIcon />}
+                                {index === 8 &&  <SupportAgentOutlinedIcon />}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>

@@ -12,6 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { useState } from 'react';
 import Chip from '@mui/material/Chip';
+import CurrencyLiraIcon from '@mui/icons-material/CurrencyLira';
 
 import Drawer from './Drawer';
 
@@ -19,37 +20,57 @@ import Drawer from './Drawer';
 export default function bkashAppBar() {
 
   const [selected, setSelected] = useState(true);
-  const balanceText = <Chip label="Tap for Balence" variant="outlined" />;
+
+  const switchControler = <Switch 
+                            onChange={event => setSelected(event.target.checked) } 
+                            color="primary" 
+                            checked={selected} 
+                          />
+
+  const balanceText = <Chip 
+        icon={<CurrencyLiraIcon />}
+        label="Tap For Balance"
+        color="primary"
+        sx={{ 
+          bgcolor: 'background.default'
+        }}  
+        variant="outlined" />;
   const balanceBDT = <Chip 
-      label="5000 BDT"
-      color="primary"
-      sx={{ 
+        icon={<CurrencyLiraIcon />}
+        label="5000 BDT"
+        color="primary"
+        sx={{ 
           bgcolor: 'background.default'
         }} 
-      variant="outlined" />;
+        variant="outlined" />;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ bgcolor: 'primary' }}>
-        <Toolbar>
+      <AppBar position="fixed" sx={{ bgcolor: 'primary', py: '10px' }}>
+        <Toolbar sx={{ px: '5px' }}>
           <Stack direction="row" spacing={2}>
-            <Avatar alt="Profile" src="https://mui.com/static/images/avatar/2.jpg" />
+            <Avatar 
+              alt="Profile" 
+              src="https://mui.com/static/images/avatar/2.jpg"
+              sx={{ width: 54, height: 54 }}
+            />
           </Stack>
           <Stack spacing={1}>
-            <Stack direction="row" spacing={1}>
+            <Stack direction="row" spacing={2} sx={{ pl: '16px', mt: '8px' }}>
               <Typography
-                variant="h6"
+                variant="body1"
+                color="inherit"
                 noWrap
                 component="div"
-                sx={{ display: { xs: 'block', sm: 'block' } }}
+                sx={{ display: { xs: 'block', sm: 'block', } }}
               >
-                MUI
+                User Name
               </Typography>
             </Stack>
-            <Stack direction="row" spacing={1}>
+            <Stack direction="row" spacing={1} sx={{ mt: 0 }}>
               <FormControlLabel
                 value={selected ? balanceText : balanceBDT }
-                control={<Switch onChange={event => setSelected(event.target.checked) } color="primary" checked={selected} />}
+                control={switchControler}
                 label={selected ? balanceText : balanceBDT }
                 labelPlacement={selected ? "start" : "start"}
               />
