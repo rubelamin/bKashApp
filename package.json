@@ -1,0 +1,46 @@
+{
+  "name": "bkashapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --out-dir temp",
+    "build": "parcel build src/index.html --out-dir build --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubelamin/bkashApp.git"
+  },
+  "keywords": [],
+  "author": "Rubel Amin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubelamin/bkashApp.git/issues"
+  },
+  "homepage": "https://github.com/rubelamin/bkashApp.git#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-flow": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/react": "^16.8.6 || ^17.0.0",
+    "@types/react-dom": "^17.0.10",
+    "parcel": "^2.0.0",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.1.0",
+    "@mui/material": "^5.2.0",
+    "@mui/styled-engine-sc": "^5.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "tslib": "^2.3.1"
+  }
+}
