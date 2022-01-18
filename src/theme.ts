@@ -23,7 +23,7 @@ export const refflyTheme = {
       grey: grey[900],
     },
     secondary: {
-      main: '#9c27b0',
+      main: '#ff5252',
       light: '#ba68c8',
       dark: '#7b1fa2',
       white: '#ffffff',
@@ -34,19 +34,20 @@ export const refflyTheme = {
       light: '#ef5350',
       dark: '#c62828',
       pink: '#d32f2f',
+      purple: '#7b1fa2',
     },
     warning: {
-      main: '#ed6c02',
+      main: '#f57f17',
       light: '#ff9800',
       dark: '#e65100',
     },
     info: {
-      main: '#0288d1',
+      main: '#0097a7',
       light: '#03a9f4',
       dark: '#01579b',
     },
     success: {
-      main: '#2e7d32',
+      main: '#009688',
       light: '#4caf50',
       dark: '#1b5e20',
     },
@@ -85,7 +86,7 @@ export const refflyTheme = {
       fontSize: '1rem',
       color: 'rgba(0, 0, 0, 0.87)',
     },
-    body2: { fontSize: '0.875rem' },
+    body2: { fontSize: '10px' },
     fontFamily: [
       '"Roboto"',
       '"Helvetica"',

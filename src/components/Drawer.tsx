@@ -74,15 +74,15 @@ export default function bKashToggleMenu() {
                     {bMenuList.map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
-                                {index === 0 && <HomeIcon /> }
-                                {index === 1 && <BarChartOutlinedIcon />}
-                                {index === 2 && <WarningAmberRoundedIcon />}
-                                {index === 3 &&  <LocalOfferOutlinedIcon />}
-                                {index === 4 &&  <GroupOutlinedIcon />}
-                                {index === 5 &&  <LocationOnOutlinedIcon />}
-                                {index === 6 &&  <AvTimerOutlinedIcon />}
-                                {index === 7 &&  <SettingsIcon />}
-                                {index === 8 &&  <SupportAgentOutlinedIcon />}
+                                {index === 0 && <HomeIcon color="primary" /> }
+                                {index === 1 && <BarChartOutlinedIcon color="primary" />}
+                                {index === 2 && <WarningAmberRoundedIcon color="primary" />}
+                                {index === 3 &&  <LocalOfferOutlinedIcon color="primary" />}
+                                {index === 4 &&  <GroupOutlinedIcon color="primary" />}
+                                {index === 5 &&  <LocationOnOutlinedIcon color="primary" />}
+                                {index === 6 &&  <AvTimerOutlinedIcon color="primary" />}
+                                {index === 7 &&  <SettingsIcon color="primary" />}
+                                {index === 8 &&  <SupportAgentOutlinedIcon color="primary" />}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
@@ -93,7 +93,7 @@ export default function bKashToggleMenu() {
                     {['Log Out'].map((text) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
-                                 <LogoutIcon /> 
+                                 <LogoutIcon color="primary" /> 
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
