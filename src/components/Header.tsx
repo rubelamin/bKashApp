@@ -18,6 +18,7 @@ import { makeStyles } from '@mui/styles';
 
 import Drawer from './Drawer';
 
+
 const useStyles = makeStyles(() => ({
     displayNone: {
       display: 'none',
@@ -113,8 +114,11 @@ export default function bkashAppBar() {
                     <EmojiEventsIcon />
                   </Badge>
                 </IconButton>
-                <Drawer />
+
+              
+                  <Drawer />
               </Box>
+
             </Grid>
           </Grid>
         </Toolbar>

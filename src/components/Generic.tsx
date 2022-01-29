@@ -15,6 +15,8 @@ import Badge from '@mui/material/Badge';
 import { purple, blueGrey, red, pink } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 
+import MyBkashSlide from "./MyBkashSlide";
+
 const useStyles = makeStyles(() => ({
     sendMoney: {
         color: '#ff5252',
@@ -55,7 +57,7 @@ const useStyles = makeStyles(() => ({
     const classes = useStyles();
 
      return <>
-     <Grid container sx={{ mt: 12,  }}>
+     <Grid container>
         <Box sx={{ flexGrow: 1 }} textAlign="center" mb={1}>
             <Paper>
                 <Grid container spacing={0}>
@@ -151,5 +153,7 @@ const useStyles = makeStyles(() => ({
             </Paper>
         </Box>
      </Grid>
+     <MyBkashSlide />
+
      </>
  }

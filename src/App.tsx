@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM  from "react-dom";
 import Header from './components/Header';
 import Generic from './components/Generic';
-import MyBkashSlide from "./components/MyBkashSlide";
-import Mstyles from "./components/Mstyles";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
@@ -17,51 +15,47 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Navigate
   } from "react-router-dom";
+  
+  
+  import Statements from './components/Statements';
+  import Limits from './components/Limits';
+  import Coupons from './components/Coupons';
+  import RefferApp from './components/RefferApp';
+  import BkashMap from './components/BkashMap';
+  import DiscoverbKash from './components/DiscoverbKash';
+  import Settings from './components/Settings';
+  import Support from './components/Support';
 
-// function Home() {
-//     return <>
-//         <Generic />
-//     </>
-// }
 
-// function sliderHome() {
-//     return <>
-//         <MyBkashSlide />
-//     </>
-// }
-// function myStyles() {
-//     return <>
-//         <Mstyles />
-//     </>
-// }
+  
 
 function App() {
+    
     return (<>
        <ThemeProvider theme= { defaultTheme }>
            <CssBaseline />
            <Container sx={{ m: 0, p: 0 }}>
-
+           <Router>
             <Header />
-            <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-            <Router>
-            <div>
-                <Link to="/generic">Home</Link>
-                <Link to="/slider">Slider</Link>
-                <Link to="/mystyle">Style</Link>
-            </div>
+            
+            <Grid container sx={{ mt: 12,  }}></Grid>
                 <Routes>
-                    <Route path="/generic" element={<Generic />} />
-                    <Route path="/slider" element={<MyBkashSlide />} />
-                    <Route path="/mystyle" element={<Mstyles />} />
+                    <Route path="/" element={<Navigate replace to="/Home" />}/>
+                        
+                    <Route path="/Home" element={<Generic />} />
+                    <Route path="/Statements" element={<Statements />} />
+                    <Route path="/Limits" element={<Limits />} />
+                    <Route path="/Coupons" element={<Coupons />} />
+                    <Route path="/ReferbKashApp" element={<RefferApp />} />
+                    <Route path="/bKashMap" element={<BkashMap />} />
+                    <Route path="/DiscoverbKash" element={<DiscoverbKash />} />
+                    <Route path="/Settings" element={<Settings />} />
+                    <Route path="/Support" element={<Support />} />
 
                 </Routes>
             </Router>
-            
             
             
             <Grid container>
@@ -76,28 +70,7 @@ function App() {
                     </Stack>
                     
                     <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
-                    <h2>I am heading 2</h2>
-                    <h1>I am heading 1</h1>
+                   
                     <h2>I am heading 2</h2>
                     
                 </Grid>

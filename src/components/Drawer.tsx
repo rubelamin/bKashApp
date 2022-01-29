@@ -21,6 +21,8 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AvTimerOutlinedIcon from '@mui/icons-material/AvTimerOutlined';
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 
+import { Link } from "react-router-dom";
+
 type Anchor = 'right';
 
 export default function bKashToggleMenu() {
@@ -44,15 +46,51 @@ export default function bKashToggleMenu() {
         };
 
         const bMenuList = [
-            'Home',
-            'Statements',
-            'Limits',
-            'Coupons',
-            'Refer bKash App',
-            'bKash Map',
-            'Discover bKash',
-            'Settings',
-            'Support'
+            {
+                text: 'Home',
+                url: '/Home',
+                component: <HomeIcon color="primary" />,
+            },
+            {
+                text: 'Statements',
+                url: '/Statements',
+                component: <BarChartOutlinedIcon color="primary" />,
+            },
+            {
+                text: 'Limits',
+                url: '/Limits',
+                component: <WarningAmberRoundedIcon color="primary" />,
+            },
+            {
+                text: 'Coupons',
+                url: '/Coupons',
+                component: <LocalOfferOutlinedIcon color="primary" />,
+            },
+            {
+                text: 'Refer bKash App',
+                url: '/ReferbKashApp',
+                component: <GroupOutlinedIcon color="primary" />,
+            },
+            {
+                text: 'bKash Map',
+                url: '/bKashMap',
+                component: <LocationOnOutlinedIcon color="primary" />,
+            },
+            {
+                text: 'Discover bKash',
+                url: '/DiscoverbKash',
+                component: <AvTimerOutlinedIcon color="primary" />,
+            },
+            {
+                text: 'Settings',
+                url: '/Settings',
+                component: <SettingsIcon color="primary" />,
+            },
+            {
+                text: 'Support',
+                url: '/Support',
+                component: <SupportAgentOutlinedIcon color="primary" />,
+            }
         ];
 
         const list = (anchor : Anchor ) => (
@@ -71,20 +109,12 @@ export default function bKashToggleMenu() {
                     </Stack>
                 </Stack>
                 <List>
-                    {bMenuList.map((text, index) => (
-                        <ListItem button key={text}>
+                    {bMenuList.map((items, index) => (
+                        <ListItem button key={ 'gg' + index} component={Link} to={items.url}>
                             <ListItemIcon>
-                                {index === 0 && <HomeIcon color="primary" /> }
-                                {index === 1 && <BarChartOutlinedIcon color="primary" />}
-                                {index === 2 && <WarningAmberRoundedIcon color="primary" />}
-                                {index === 3 &&  <LocalOfferOutlinedIcon color="primary" />}
-                                {index === 4 &&  <GroupOutlinedIcon color="primary" />}
-                                {index === 5 &&  <LocationOnOutlinedIcon color="primary" />}
-                                {index === 6 &&  <AvTimerOutlinedIcon color="primary" />}
-                                {index === 7 &&  <SettingsIcon color="primary" />}
-                                {index === 8 &&  <SupportAgentOutlinedIcon color="primary" />}
+                               {items.component}
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary={items.text} />
                         </ListItem>
                     ) )}
                 </List>

@@ -83,7 +83,7 @@ export const refflyTheme = {
     h2: { fontSize: '2.25rem' },
     h1: { fontSize: '2.50rem' },
     body1: { 
-      fontSize: '1rem',
+      fontSize: '12px',
       color: 'rgba(0, 0, 0, 0.87)',
     },
     body2: { fontSize: '10px' },
