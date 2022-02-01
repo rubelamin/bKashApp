@@ -17,6 +17,8 @@ import { makeStyles } from '@mui/styles';
 
 import MyBkashSlide from "./MyBkashSlide";
 
+import { Link } from 'react-router-dom'; 
+
 const useStyles = makeStyles(() => ({
     sendMoney: {
         color: '#ff5252',
@@ -54,24 +56,40 @@ const useStyles = makeStyles(() => ({
 
  export default function HomePagebKash() {
 
-    const classes = useStyles();
+     const classes = useStyles();
+     
+     const useActions = [
+         {
+             text: 'Send Money',
+             url: '/sendmoney',
+             component: <CurrencyExchangeIcon className={classes.sendMoney}  />
+         },
+         {
+             text: 'Mobile Recharge',
+             url: '/mobilerecharge',
+             component: <PhoneIphoneIcon className={classes.recharge} />
+         }
+     ];
 
      return <>
      <Grid container>
         <Box sx={{ flexGrow: 1 }} textAlign="center" mb={1}>
             <Paper>
                 <Grid container spacing={0}>
-                    <Grid item xs={3}>
-                        <Box alignContent="center">
-                            <Box textAlign="center">
-                                <CurrencyExchangeIcon className={classes.sendMoney}  />
+                     {useActions.map((items, index) => (
+                        <Grid item xs={3} key={'gg' + index} component={Link} to={items.url}>
+                            <Box alignContent="center" >
+                                <Box textAlign="center">
+                                    {items.component}
+                                </Box>
+                                <Typography component="span" variant="body2">
+                                    {items.text}
+                                </Typography>
                             </Box>
-                            <Typography component="span" variant="body2">
-                                Send Money
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={3}>
+                        </Grid>
+                    ))}
+                         
+                    {/* <Grid item xs={3}>
                         <Box alignContent="center">
                             <Box textAlign="center">
                                 <PhoneIphoneIcon className={classes.recharge} />
@@ -80,7 +98,7 @@ const useStyles = makeStyles(() => ({
                                 Mobile Recharge
                             </Typography>
                         </Box>
-                    </Grid>
+                    </Grid> */}
                     <Grid item xs={3}>
                         <Box alignContent="center">
                             <Box textAlign="center">

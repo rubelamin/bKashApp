@@ -78,36 +78,36 @@ export default function Transdetails(props: any) {
                         <Grid item xs={7}>
                             {props.amount}
                         </Grid>
-                        <Grid item xs={12}>
-                            <Divider sx={{ mt: 1, mb: 1 }} />
-                        </Grid>
+                        
+                        <Divider sx={{ width: '100%' }} />
+                        
                         <Grid item xs={5}>
                             From
                         </Grid>
                         <Grid item xs={7}>
                             {props.usernumber}
                         </Grid>
-                        <Grid item xs={12}>
-                            <Divider sx={{ mt: 1, mb: 1 }} />
-                        </Grid>
+                        
+                        <Divider sx={{ width: '100%' }} />
+                        
                         <Grid item xs={5}>
                             Date :
                         </Grid>
                         <Grid item xs={7}>
                             {props.time}
                         </Grid>
-                        <Grid item xs={12}>
-                            <Divider sx={{ mt: 1, mb: 1 }} />
-                        </Grid>
+                        
+                        <Divider sx={{ width: '100%' }} />
+                        
                         <Grid item xs={5}>
                             Trans Id:
                         </Grid>
                         <Grid item xs={7}>
                             {props.transID}
                         </Grid>
-                        <Grid item xs={12}>
-                            <Divider sx={{ mt: 1, mb: 1 }} />
-                        </Grid>
+                        
+                        <Divider sx={{ width: '100%' }} />
+                        
                     </Grid>
                 </Box>
             </Modal>

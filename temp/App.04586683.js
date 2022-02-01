@@ -83312,6 +83312,8 @@ var _styles = require("@mui/styles");
 
 var _MyBkashSlide = _interopRequireDefault(require("./MyBkashSlide"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var useStyles = (0, _styles.makeStyles)(function () {
@@ -83353,6 +83355,19 @@ var useStyles = (0, _styles.makeStyles)(function () {
 
 function HomePagebKash() {
   var classes = useStyles();
+  var useActions = [{
+    text: 'Send Money',
+    url: '/sendmoney',
+    component: _react.default.createElement(_CurrencyExchange.default, {
+      className: classes.sendMoney
+    })
+  }, {
+    text: 'Mobile Recharge',
+    url: '/mobilerecharge',
+    component: _react.default.createElement(_PhoneIphone.default, {
+      className: classes.recharge
+    })
+  }];
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.default, {
     container: true
   }, _react.default.createElement(_Box.default, {
@@ -83364,31 +83379,22 @@ function HomePagebKash() {
   }, _react.default.createElement(_Paper.default, null, _react.default.createElement(_Grid.default, {
     container: true,
     spacing: 0
-  }, _react.default.createElement(_Grid.default, {
-    item: true,
-    xs: 3
-  }, _react.default.createElement(_Box.default, {
-    alignContent: "center"
-  }, _react.default.createElement(_Box.default, {
-    textAlign: "center"
-  }, _react.default.createElement(_CurrencyExchange.default, {
-    className: classes.sendMoney
-  })), _react.default.createElement(_Typography.default, {
-    component: "span",
-    variant: "body2"
-  }, "Send Money"))), _react.default.createElement(_Grid.default, {
-    item: true,
-    xs: 3
-  }, _react.default.createElement(_Box.default, {
-    alignContent: "center"
-  }, _react.default.createElement(_Box.default, {
-    textAlign: "center"
-  }, _react.default.createElement(_PhoneIphone.default, {
-    className: classes.recharge
-  })), _react.default.createElement(_Typography.default, {
-    component: "span",
-    variant: "body2"
-  }, "Mobile Recharge"))), _react.default.createElement(_Grid.default, {
+  }, useActions.map(function (items, index) {
+    return _react.default.createElement(_Grid.default, {
+      item: true,
+      xs: 3,
+      key: 'gg' + index,
+      component: _reactRouterDom.Link,
+      to: items.url
+    }, _react.default.createElement(_Box.default, {
+      alignContent: "center"
+    }, _react.default.createElement(_Box.default, {
+      textAlign: "center"
+    }, items.component), _react.default.createElement(_Typography.default, {
+      component: "span",
+      variant: "body2"
+    }, items.text)));
+  }), _react.default.createElement(_Grid.default, {
     item: true,
     xs: 3
   }, _react.default.createElement(_Box.default, {
@@ -83480,7 +83486,7 @@ function HomePagebKash() {
     variant: "body2"
   }, "More"))))))), _react.default.createElement(_MyBkashSlide.default, null));
 }
-},{"react":"../node_modules/react/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Paper":"../node_modules/@mui/material/Paper/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/icons-material/CurrencyExchange":"../node_modules/@mui/icons-material/CurrencyExchange.js","@mui/icons-material/PhoneIphone":"../node_modules/@mui/icons-material/PhoneIphone.js","@mui/icons-material/CleanHands":"../node_modules/@mui/icons-material/CleanHands.js","@mui/icons-material/ShoppingBag":"../node_modules/@mui/icons-material/ShoppingBag.js","@mui/icons-material/VideogameAsset":"../node_modules/@mui/icons-material/VideogameAsset.js","@mui/icons-material/EmojiObjects":"../node_modules/@mui/icons-material/EmojiObjects.js","@mui/icons-material/VolunteerActivism":"../node_modules/@mui/icons-material/VolunteerActivism.js","@mui/icons-material/DashboardCustomize":"../node_modules/@mui/icons-material/DashboardCustomize.js","@mui/material/Badge":"../node_modules/@mui/material/Badge/index.js","@mui/material/colors":"../node_modules/@mui/material/colors/index.js","@mui/styles":"../node_modules/@mui/styles/index.js","./MyBkashSlide":"components/MyBkashSlide.tsx"}],"../node_modules/@mui/material/GlobalStyles/GlobalStyles.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Paper":"../node_modules/@mui/material/Paper/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/icons-material/CurrencyExchange":"../node_modules/@mui/icons-material/CurrencyExchange.js","@mui/icons-material/PhoneIphone":"../node_modules/@mui/icons-material/PhoneIphone.js","@mui/icons-material/CleanHands":"../node_modules/@mui/icons-material/CleanHands.js","@mui/icons-material/ShoppingBag":"../node_modules/@mui/icons-material/ShoppingBag.js","@mui/icons-material/VideogameAsset":"../node_modules/@mui/icons-material/VideogameAsset.js","@mui/icons-material/EmojiObjects":"../node_modules/@mui/icons-material/EmojiObjects.js","@mui/icons-material/VolunteerActivism":"../node_modules/@mui/icons-material/VolunteerActivism.js","@mui/icons-material/DashboardCustomize":"../node_modules/@mui/icons-material/DashboardCustomize.js","@mui/material/Badge":"../node_modules/@mui/material/Badge/index.js","@mui/material/colors":"../node_modules/@mui/material/colors/index.js","@mui/styles":"../node_modules/@mui/styles/index.js","./MyBkashSlide":"components/MyBkashSlide.tsx","react-router-dom":"../node_modules/react-router-dom/index.js"}],"../node_modules/@mui/material/GlobalStyles/GlobalStyles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -86342,57 +86348,41 @@ function Transdetails(props) {
   }, props.cashtype), React.createElement(_Grid.default, {
     item: true,
     xs: 7
-  }, props.amount), React.createElement(_Grid.default, {
-    item: true,
-    xs: 12
-  }, React.createElement(_Divider.default, {
+  }, props.amount), React.createElement(_Divider.default, {
     sx: {
-      mt: 1,
-      mb: 1
+      width: '100%'
     }
-  })), React.createElement(_Grid.default, {
+  }), React.createElement(_Grid.default, {
     item: true,
     xs: 5
   }, "From"), React.createElement(_Grid.default, {
     item: true,
     xs: 7
-  }, props.usernumber), React.createElement(_Grid.default, {
-    item: true,
-    xs: 12
-  }, React.createElement(_Divider.default, {
+  }, props.usernumber), React.createElement(_Divider.default, {
     sx: {
-      mt: 1,
-      mb: 1
+      width: '100%'
     }
-  })), React.createElement(_Grid.default, {
+  }), React.createElement(_Grid.default, {
     item: true,
     xs: 5
   }, "Date :"), React.createElement(_Grid.default, {
     item: true,
     xs: 7
-  }, props.time), React.createElement(_Grid.default, {
-    item: true,
-    xs: 12
-  }, React.createElement(_Divider.default, {
+  }, props.time), React.createElement(_Divider.default, {
     sx: {
-      mt: 1,
-      mb: 1
+      width: '100%'
     }
-  })), React.createElement(_Grid.default, {
+  }), React.createElement(_Grid.default, {
     item: true,
     xs: 5
   }, "Trans Id:"), React.createElement(_Grid.default, {
     item: true,
     xs: 7
-  }, props.transID), React.createElement(_Grid.default, {
-    item: true,
-    xs: 12
-  }, React.createElement(_Divider.default, {
+  }, props.transID), React.createElement(_Divider.default, {
     sx: {
-      mt: 1,
-      mb: 1
+      width: '100%'
     }
-  })))))));
+  }))))));
 }
 },{"react":"../node_modules/react/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/material/Avatar":"../node_modules/@mui/material/Avatar/index.js","@mui/material/Divider":"../node_modules/@mui/material/Divider/index.js","@mui/material/Modal":"../node_modules/@mui/material/Modal/index.js"}],"components/Statements.tsx":[function(require,module,exports) {
 "use strict";
@@ -86513,20 +86503,169 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Limits;
 
-var _react = _interopRequireDefault(require("react"));
+var React = _interopRequireWildcard(require("react"));
 
 var _Grid = _interopRequireDefault(require("@mui/material/Grid"));
 
 var _Typography = _interopRequireDefault(require("@mui/material/Typography"));
 
+var _Box = _interopRequireDefault(require("@mui/material/Box"));
+
+var _Tab = _interopRequireDefault(require("@mui/material/Tab"));
+
+var _TabContext = _interopRequireDefault(require("@mui/lab/TabContext"));
+
+var _TabList = _interopRequireDefault(require("@mui/lab/TabList"));
+
+var _TabPanel = _interopRequireDefault(require("@mui/lab/TabPanel"));
+
+var _Divider = _interopRequireDefault(require("@mui/material/Divider"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function Limits() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.default, {
+  var _a = React.useState('1'),
+      value = _a[0],
+      setValue = _a[1];
+
+  var handleChange = function handleChange(event, newValue) {
+    setValue(newValue);
+  };
+
+  return React.createElement(React.Fragment, null, React.createElement(_Grid.default, {
+    container: true,
+    spacing: 1
+  }, React.createElement(_Grid.default, {
+    item: true,
+    xs: 12
+  }, React.createElement(_Typography.default, null, "Limits"), React.createElement(_Box.default, {
+    sx: {
+      width: '100%'
+    }
+  }, React.createElement(_TabContext.default, {
+    value: value
+  }, React.createElement(_Box.default, {
+    sx: {
+      borderBottom: 1,
+      borderColor: 'divider'
+    }
+  }, React.createElement(_TabList.default, {
+    onChange: handleChange
+  }, React.createElement(_Tab.default, {
+    value: "1",
+    label: "Daily",
+    sx: {
+      textTransform: 'capitalize'
+    }
+  }), React.createElement(_Tab.default, {
+    value: "2",
+    label: "Monthly",
+    sx: {
+      textTransform: 'capitalize'
+    }
+  }))), React.createElement(_TabPanel.default, {
+    value: "1"
+  }, React.createElement(_Grid.default, {
     container: true
-  }, _react.default.createElement(_Typography.default, null, "This is the Limit page")));
+  }, React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Mobile Recharge"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 1550"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Send Money"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 25000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Cash Out"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 25000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Cash In"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 25000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }))), React.createElement(_TabPanel.default, {
+    value: "2"
+  }, React.createElement(_Grid.default, {
+    container: true
+  }, React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Mobile Recharge"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 11550"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Send Money"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 225000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Cash Out"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 225000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Cash In"), React.createElement(_Grid.default, {
+    item: true,
+    xs: 6
+  }, "Tk. 225000"), React.createElement(_Divider.default, {
+    sx: {
+      width: '100%',
+      my: 1
+    }
+  }))))))));
 }
-},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js"}],"components/Coupons.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js","@mui/material/Box":"../node_modules/@mui/material/Box/index.js","@mui/material/Tab":"../node_modules/@mui/material/Tab/index.js","@mui/lab/TabContext":"../node_modules/@mui/lab/TabContext/index.js","@mui/lab/TabList":"../node_modules/@mui/lab/TabList/index.js","@mui/lab/TabPanel":"../node_modules/@mui/lab/TabPanel/index.js","@mui/material/Divider":"../node_modules/@mui/material/Divider/index.js"}],"components/Coupons.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -86652,7 +86791,59 @@ function Support() {
     container: true
   }, _react.default.createElement(_Typography.default, null, "This is the support page")));
 }
-},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js"}],"App.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Typography":"../node_modules/@mui/material/Typography/index.js"}],"components/actions/mobilerecharge.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = MobileRecharge;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _Grid = _interopRequireDefault(require("@mui/material/Grid"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function MobileRecharge() {
+  return React.createElement(React.Fragment, null, React.createElement(_Grid.default, {
+    container: true
+  }, React.createElement(_Grid.default, {
+    item: true,
+    xs: 12
+  }, "Send money page here")));
+}
+},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js"}],"components/actions/sendmoney.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = SendMoney;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _Grid = _interopRequireDefault(require("@mui/material/Grid"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function SendMoney() {
+  return React.createElement(React.Fragment, null, React.createElement(_Grid.default, {
+    container: true
+  }, React.createElement(_Grid.default, {
+    item: true,
+    xs: 12
+  }, "Send money page here")));
+}
+},{"react":"../node_modules/react/index.js","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js"}],"App.tsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -86694,6 +86885,10 @@ var _DiscoverbKash = _interopRequireDefault(require("./components/DiscoverbKash"
 var _Settings = _interopRequireDefault(require("./components/Settings"));
 
 var _Support = _interopRequireDefault(require("./components/Support"));
+
+var _mobilerecharge = _interopRequireDefault(require("./components/actions/mobilerecharge"));
+
+var _sendmoney = _interopRequireDefault(require("./components/actions/sendmoney"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -86743,6 +86938,12 @@ function App() {
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/Support",
     element: _react.default.createElement(_Support.default, null)
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/sendmoney",
+    element: _react.default.createElement(_sendmoney.default, null)
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/mobilerecharge",
+    element: _react.default.createElement(_mobilerecharge.default, null)
   }))), _react.default.createElement(_Grid.default, {
     container: true
   }, _react.default.createElement(_Grid.default, {
@@ -86768,7 +86969,7 @@ function App() {
 }
 
 _reactDom.default.render(_react.default.createElement(App, null), document.getElementById("app"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/Header":"components/Header.tsx","./components/Generic":"components/Generic.tsx","@mui/material/CssBaseline":"../node_modules/@mui/material/CssBaseline/index.js","@mui/material/styles":"../node_modules/@mui/material/styles/index.js","./theme":"theme.ts","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Container":"../node_modules/@mui/material/Container/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/material/Chip":"../node_modules/@mui/material/Chip/index.js","react-router-dom":"../node_modules/react-router-dom/index.js","./components/Statements":"components/Statements.tsx","./components/Limits":"components/Limits.tsx","./components/Coupons":"components/Coupons.tsx","./components/RefferApp":"components/RefferApp.tsx","./components/BkashMap":"components/BkashMap.tsx","./components/DiscoverbKash":"components/DiscoverbKash.tsx","./components/Settings":"components/Settings.tsx","./components/Support":"components/Support.tsx"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/Header":"components/Header.tsx","./components/Generic":"components/Generic.tsx","@mui/material/CssBaseline":"../node_modules/@mui/material/CssBaseline/index.js","@mui/material/styles":"../node_modules/@mui/material/styles/index.js","./theme":"theme.ts","@mui/material/Grid":"../node_modules/@mui/material/Grid/index.js","@mui/material/Container":"../node_modules/@mui/material/Container/index.js","@mui/material/Stack":"../node_modules/@mui/material/Stack/index.js","@mui/material/Chip":"../node_modules/@mui/material/Chip/index.js","react-router-dom":"../node_modules/react-router-dom/index.js","./components/Statements":"components/Statements.tsx","./components/Limits":"components/Limits.tsx","./components/Coupons":"components/Coupons.tsx","./components/RefferApp":"components/RefferApp.tsx","./components/BkashMap":"components/BkashMap.tsx","./components/DiscoverbKash":"components/DiscoverbKash.tsx","./components/Settings":"components/Settings.tsx","./components/Support":"components/Support.tsx","./components/actions/mobilerecharge":"components/actions/mobilerecharge.tsx","./components/actions/sendmoney":"components/actions/sendmoney.tsx"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -86796,7 +86997,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46481" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40547" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

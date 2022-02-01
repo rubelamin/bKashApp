@@ -26,7 +26,9 @@ import {
   import BkashMap from './components/BkashMap';
   import DiscoverbKash from './components/DiscoverbKash';
   import Settings from './components/Settings';
-  import Support from './components/Support';
+import Support from './components/Support';
+import Mobilerecharge from './components/actions/mobilerecharge';
+import SendMoney from "./components/actions/sendmoney";
 
 
   
@@ -53,6 +55,8 @@ function App() {
                     <Route path="/DiscoverbKash" element={<DiscoverbKash />} />
                     <Route path="/Settings" element={<Settings />} />
                     <Route path="/Support" element={<Support />} />
+                    <Route path="/sendmoney" element={<SendMoney />} />
+                    <Route path="/mobilerecharge" element={<Mobilerecharge />} />
 
                 </Routes>
             </Router>
